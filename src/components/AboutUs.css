@@ -93,7 +93,7 @@
 
 .about-us-video iframe {
     max-width: 100%;
-    height: 15rem; /* Maintain aspect ratio */
+    height: 15rem; 
     margin-top: 5%;
 }
 
