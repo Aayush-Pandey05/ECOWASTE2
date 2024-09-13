@@ -1,7 +1,7 @@
 import React from "react";
 import "./AboutUs.css";
-import Typewriter from "typewriter-effect";
 import { useEffect } from "react";
+import Typewriter from "typewriter-effect";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 
@@ -17,14 +17,16 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="about-us-container">
-      <section className="about-us-hero">
-        <h1 data-aos="zoom-in">About Us</h1>
-        <div className="intro">
+    <div>
+      <div className="hero-aboutus">
+        <h1 data-aos="zoom-in">
+          <b>About Us</b>
+        </h1>
+        <p>
           <Typewriter
             options={{
               autoStart: true,
-              loop: true,
+              loop: false,
             }}
             onInit={(typewriter) => {
               typewriter
@@ -38,38 +40,28 @@ const AboutUs = () => {
                 .start();
             }}
           />
-        </div>
-      </section>
+        </p>
+      </div>
 
-      <section className="about-us-details">
-        {/* <div className="about-us-mission">
-          <h2>Our Mission</h2>
-          <p>
-            Our mission is to provide easy and effective waste management
-            services, ensuring proper waste segregation and disposal to reduce
-            environmental harm. We aim to create awareness and foster
-            responsible habits for a more sustainable planet.
-          </p>
-        </div> */}
-
-        <div className="about-us-video">
+      <div className="about-us-video">
+        <div className="aboutus-1" data-aos="zoom-in-up">
           <h2>Why Waste Management Matters</h2>
           <p>
             Watch this short video to understand the impact of improper waste
             management and how our platform can help solve this critical issue.
           </p>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/something"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            data-aos="zoom-in-up"
-          ></iframe>
         </div>
-      </section>
+        <iframe
+          width={560}
+          height={315}
+          src="https://www.youtube.com/embed/something"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          data-aos="zoom-in-up"
+        />
+      </div>
     </div>
   );
 };
